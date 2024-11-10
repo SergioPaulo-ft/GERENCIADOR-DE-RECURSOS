@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body> 
+    <h1>Calculadora IPC <i class="fa-solid fa-wrench" style="color: #FFD43B;"></i></h1>
+
+    <div class="container">
+        <section class="box aproveitamento" data-link="aproveitamento.html">
+            <i><a href="aproveitamento.html" class="box-link">Aproveitamento de Corte</a></i>
+            <p>Obtenha uma relação detalhada de corte evitando desperdício de material</p>
+        </section>
+
+        <section class="box estocando" data-link="estocando.html">
+            <i><a href="estocando.html" class="box-link">Reposição do Estoque</a></i>
+            <p>Calcule a reposição de estoque considerando sua demanda para corte</p>
+        </section>
+        <section class="box ModeloEsteira" data-link="ModeloEsteira.html">
+            <i><a href="ModeloEsteira.html" class="box-link">Cria seu modelo de Esteira</a></i>
+            <p>Veja quantidade de eixos e roletes necessarios para fazer sua esteira</p>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.box').forEach(box => {
+            box.addEventListener('click', function() {
+                window.location.href = this.getAttribute('data-link');
+            });
+        });
+
+        document.querySelectorAll('.box-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

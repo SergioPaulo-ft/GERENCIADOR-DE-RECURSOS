@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700; /* Font weight for the header */
+}
+
+.box{
+    position: relative;
+    color: #fff;
+    border-radius: 10px;
+    margin: 15px;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 400; /* Font weight for the box text */
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: brightness(50%); /* Reduz o brilho da imagem para criar o efeito de sombra */
+    z-index: 0;
+}
+
+.box.aproveitamento::before {
+    background-image: url('../img/serra.jpg');
+}
+
+.box.estocando::before {
+    background-image: url('../img/estoque.jpg');
+}
+
+.box.ModeloEsteira::before {
+    background-image: url('../img/esteira.jpg');
+}
+
+.box * {
+    position: relative;
+    z-index: 1;
+}
+
+.box a{
+    color: gold;
+    text-decoration: none; /* Removes underline from links */
+    font-weight: 700; /* Font weight for the links */
+}
+.box p:hover{
+    cursor: pointer;
+}
+
+.box:hover::before{
+    filter: brightness(30%);
+    cursor: pointer;
+}

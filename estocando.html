@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reabastecimento do Estoque</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <h1>Reabastecimento do Estoque</h1>
+    <form id="calcular-form" name="calcular-form" action="">
+        <div class="info-pecas">
+            <h2>Informações do pedido</h2>
+            <div class="input-box">
+                <label for="quantPecas">Quantidade de Peças</label>
+                <input required type="number" name="quantPecas" id="quantPecas" min="1">
+            </div>
+            <div class="input-box">
+                <label for="MedidaCorte">Medida de Corte em milímetros</label>
+                <input required type="number" name="MedidaCorte" id="MedidaCorte" min="1">
+            </div>
+            <div class="input-box">
+                <label for="MedidaInteira">Peça inteira em milimetros</label>
+                <input required type="number" name="MedidaInteira" id="MedidaInteira" min="1"> 
+            </div>
+        </div>
+        <input type="button" value="Calcular" id="calcular" class="bt">
+        <i id="VerHistorico" class="VerHistorico"> VerHistorico </i>
+    </form>
+    <div id="result" style="display: none"></div>
+    <script src="js/estocando.js"></script>
+</body>
+</html>
